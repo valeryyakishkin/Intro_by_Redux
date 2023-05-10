@@ -32,7 +32,7 @@ function App() {
           <li key={todo.id}>
             <input type="checkbox" />
             <span>{todo.text}</span>
-            <span style={{ color: "red" }}>&times;</span>
+            <span className="delete">&times;</span>
           </li>
         ))}
       </ul>
