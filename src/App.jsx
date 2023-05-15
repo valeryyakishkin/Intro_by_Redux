@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoList from "./components/TodoList";
+import InputField from "./components/InputField";
 
 import "./App.css";
 
@@ -40,10 +41,8 @@ function App() {
 
   return (
     <div className="App">
-      <label>
-        <input value={text} onChange={(e) => setText(e.target.value)} />
-        <button onClick={addTodo}>Add Todo</button>
-      </label>
+      <InputField text={text} handleInput={setText} handleSubmit={addTodo} />
+
       <TodoList
         todos={todos}
         toggleTodoComplete={toggleTodoComplete}
